@@ -1,7 +1,7 @@
 import './App.css'
 import Form from './form/Form'
 import Result from './result/Result'
-import useStore from './zstore'
+import useStore from './store'
 
 function App() {
   return (
