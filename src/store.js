@@ -4,11 +4,8 @@ import { create } from 'zustand'
 
 const calculateTipPerPerson = (bill, tipPercent, customTipPercent, people) => {
   let currentPercent = tipPercent !== 0 ? tipPercent : customTipPercent
-  console.log(currentPercent)
   const percent = currentPercent / 100
-  console.log(percent)
   const result = (bill * percent) / Number(people)
-  console.log(result)
   return result
 }
 
