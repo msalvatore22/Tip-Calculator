@@ -8,7 +8,9 @@ const Form = () => {
     bill, 
     updateBill, 
     tipPercent, 
-    updateTipPercent, 
+    updateTipPercent,
+    customTipPercent,
+    updateCustomTipPercent,
     people, 
     updatePeople,
     updateTipPerPerson,
@@ -18,8 +20,22 @@ const Form = () => {
   const handleBtnClick = (e, btn) => {
     e.preventDefault()
     updateTipPercent(btn)
-    updateTipPerPerson(bill, tipPercent, people)
-    updateTotalPerPerson(bill, tipPercent, people)
+    updateTipPerPerson()
+    updateTotalPerPerson()
+  }
+
+  const handlePeopleChange = (e) => {
+    e.preventDefault()
+    updatePeople(e.currentTarget.value)
+    updateTipPerPerson()
+    updateTotalPerPerson()
+  }
+
+  const handleCustomTipChange = (e) => {
+    e.preventDefault()
+    updateCustomTipPercent(e.currentTarget.value)
+    updateTipPerPerson()
+    updateTotalPerPerson()
   }
 
   return (
@@ -34,12 +50,18 @@ const Form = () => {
           value={bill}
         />
         <div className='button-container'>
-          {tipBtns.map((btn) => {
-            return <button onClick={(e) => handleBtnClick(e, btn)} className='tip-btn'>{btn}%</button>
+          {tipBtns.map((btn, idx) => {
+            let activeStyle = {
+              backgroundColor: tipPercent == btn ? 'hsl(184, 14%, 56%)' : ''
+            }
+
+            return <button key={idx} onClick={(e) => handleBtnClick(e, btn)} style={activeStyle} className='tip-btn'>{btn}%</button>
           })}
           <input
             id='custom-tip'
             placeholder='Custom' 
+            onChange={(e) => handleCustomTipChange(e)}
+            value={customTipPercent}
           />
         </div>
         <label htmlFor='people'>Number of People</label>
@@ -47,7 +69,7 @@ const Form = () => {
         <input 
           id='people'
           placeholder='1'
-          onChange={(e) => updatePeople(e.currentTarget.value)}
+          onChange={(e) => handlePeopleChange(e)}
           value={people}
         />
       </form>
