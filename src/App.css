@@ -17,8 +17,9 @@ body {
 .app-card {
   display: flex;
   justify-content: space-evenly;
-  width: 600px;
-  background-color: hsl(189, 41%, 97%);
+  width: 800px;
+  height: 400px;
+  background-color: hsl(0, 0%, 100%);
   padding: 20px;
   border-radius: 5px;
 }

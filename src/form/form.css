@@ -1,8 +1,62 @@
+.form-container {
+  width: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+input, textarea, button {font-family: inherit}
+
 input {
   font-size: 24px;
   text-align: right;
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+input, select, textarea{
+  color: hsl(183, 100%, 15%);
+}
+
+textarea:focus, input:focus {
+  color: hsl(183, 100%, 15%);
+  outline: none !important;
+  border: 2px solid hsl(172, 67%, 45%)
 }
 
 input, label {
-  display:block;
+  display: block;
+  color: hsl(186, 14%, 43%);
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.btn-container > button {
+  background-color: hsl(183, 100%, 15%);
+  width: 100px;
+  height: 50px;
+  margin: 5px 10px 5px 0px;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%)
+}
+
+#custom-tip {
+  width: 100px;
+  padding: 0px;
+  margin: 5px 10px 5px 0px;
+  text-align: center;
 }

@@ -4,11 +4,12 @@ import useStore from '../store'
 import formatter from '../usdFormatter'
 
 const Result = () => {
-  const {bill, tipPercent, people, tipPerPerson, totalPerPerson} = useStore()
+  const {bill, tipPercent, customTipPercent, people, tipPerPerson, totalPerPerson} = useStore()
   return (
     <div>
       <p>Bill is {formatter.format(bill)}</p>
       <p>Tip Percent is {tipPercent}</p>
+      <p>Custom Tip Percent is {customTipPercent}</p>
       <p>People is {people}</p>
       <p>Tip per person is {formatter.format(tipPerPerson)}</p>
       <p>Total per person is {formatter.format(totalPerPerson)}</p>
