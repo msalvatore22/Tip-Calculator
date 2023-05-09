@@ -1,0 +1,43 @@
+.result-container {
+  width: 50%;
+  background-color: hsl(183, 100%, 15%);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result-name {
+  color: hsl(0, 0%, 100%);
+}
+
+.per-person {
+  color: hsl(184, 14%, 56%);
+  margin-top: -10px;
+}
+
+.result-dollar {
+  color: hsl(172, 67%, 45%)
+}
+
+.reset-btn {
+  width: 100%;
+  display: block;
+  padding: 5px;
+  font-size: medium;
+  color: hsl(183, 100%, 15%);
+  background-color: hsla(172, 67%, 45%, 0.439);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: hsl(172, 80%, 70%);
+}

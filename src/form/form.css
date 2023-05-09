@@ -9,6 +9,11 @@ form {
   height: 100%;
 }
 
+svg {
+  position: absolute;
+  padding: 12px;
+}
+
 input, textarea, button {font-family: inherit}
 
 input {
@@ -33,6 +38,7 @@ textarea:focus, input:focus {
 
 input, label {
   display: block;
+  margin: 5px 0;
   color: hsl(186, 14%, 43%);
 }
 
@@ -46,17 +52,23 @@ input, label {
 .btn-container > button {
   background-color: hsl(183, 100%, 15%);
   width: 100px;
-  height: 50px;
+  height: 40px;
   margin: 5px 10px 5px 0px;
   font-size: 24px;
   border: none;
   border-radius: 5px;
-  color: hsl(0, 0%, 100%)
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.btn-container > button:hover {
+  background-color: hsl(172, 80%, 70%);
 }
 
 #custom-tip {
   width: 100px;
-  padding: 0px;
+  height: 40px;
+  padding: 0;
   margin: 5px 10px 5px 0px;
   text-align: center;
 }

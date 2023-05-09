@@ -6,13 +6,31 @@ import formatter from '../usdFormatter'
 const Result = () => {
   const {bill, tipPercent, customTipPercent, people, tipPerPerson, totalPerPerson} = useStore()
   return (
-    <div>
-      <p>Bill is {formatter.format(bill)}</p>
-      <p>Tip Percent is {tipPercent}</p>
-      <p>Custom Tip Percent is {customTipPercent}</p>
-      <p>People is {people}</p>
-      <p>Tip per person is {formatter.format(tipPerPerson)}</p>
-      <p>Total per person is {formatter.format(totalPerPerson)}</p>
+    <div className='result-container'>
+      <div>
+        <div className='result-text'>
+          <div>
+            <p className='result-name'>Tip Amount</p>
+            <p className='per-person'>/ person</p>
+          </div>
+          <div>
+            <h1 className='result-dollar'>{formatter.format(tipPerPerson)}</h1>
+          </div>
+        </div>
+        <div className='result-text'>
+          <div>
+            <p className='result-name'>Total</p>
+            <p className='per-person'>/ person</p>
+          </div>
+          <div>
+            <h1 className='result-dollar'>{formatter.format(totalPerPerson)}</h1>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button className='reset-btn'>RESET</button>
+      </div>
     </div>
   )
 }

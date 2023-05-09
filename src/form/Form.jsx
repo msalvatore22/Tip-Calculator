@@ -17,6 +17,13 @@ const Form = () => {
     updateTotalPerPerson
   } = useStore()
 
+  const handleBillChange = (e) => {
+    e.preventDefault()
+    updateBill(e.currentTarget.value)
+    updateTipPerPerson()
+    updateTotalPerPerson()
+  }
+
   const handleBtnClick = (e, btn) => {
     e.preventDefault()
     updateTipPercent(btn)
@@ -47,7 +54,7 @@ const Form = () => {
           <input
             id='bill'
             placeholder='0'
-            onChange={(e) => updateBill(e.currentTarget.value)}
+            onChange={(e) => handleBillChange(e)}
             value={bill}
             maxLength={5}
           />
@@ -58,7 +65,7 @@ const Form = () => {
           
             {tipBtns.map((btn, idx) => {
               let activeStyle = {
-                backgroundColor: tipPercent == btn ? 'hsl(184, 14%, 56%)' : ''
+                backgroundColor: tipPercent == btn ? 'hsl(172, 67%, 45%)' : ''
               }
 
               return <button key={idx} onClick={(e) => handleBtnClick(e, btn)} style={activeStyle} className='tip-btn'>{btn}%</button>
@@ -67,7 +74,7 @@ const Form = () => {
               id='custom-tip'
               placeholder='Custom' 
               onChange={(e) => handleCustomTipChange(e)}
-              onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
+              onKeyDown={(e) => { e.key === 'Enter' && e.preventDefault(); }}
               value={customTipPercent}
               maxLength={2}
             />
