@@ -37,7 +37,7 @@ body {
   .app-card {
     padding: 20px;
     width: 100vw;
-    height: 90vh;
+    min-height: 90vh;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
