@@ -28,3 +28,19 @@ body {
   border-radius: 20px;
 }
 
+
+@media screen and (max-width: 800px) {
+  .app-container {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .app-card {
+    padding: 20px;
+    width: 100vw;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

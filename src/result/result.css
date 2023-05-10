@@ -41,3 +41,10 @@
 .reset-btn:hover {
   background-color: hsl(172, 80%, 70%);
 }
+
+
+@media screen and (max-width: 800px) {
+  .result-container{
+    width: 100%;
+  }
+}
