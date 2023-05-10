@@ -4,7 +4,7 @@ import useStore from '../store'
 import formatter from '../usdFormatter'
 
 const Result = () => {
-  const {bill, tipPercent, customTipPercent, people, tipPerPerson, totalPerPerson} = useStore()
+  const {tipPerPerson, totalPerPerson, reset} = useStore()
   return (
     <div className='result-container'>
       <div>
@@ -29,7 +29,7 @@ const Result = () => {
       </div>
 
       <div>
-        <button className='reset-btn'>RESET</button>
+        <button onClick={() => reset()} className='reset-btn'>RESET</button>
       </div>
     </div>
   )
