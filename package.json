@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://msalvatore22.github.io/Tip-Calculator/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
