@@ -60,7 +60,7 @@ const Form = () => {
             placeholder='0'
             onChange={(e) => handleBillChange(e)}
             value={bill}
-            maxLength={5}
+            maxLength={10}
           />
         </div>
         <div>
