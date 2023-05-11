@@ -39,7 +39,7 @@ body {
     width: 100vw;
     min-height: 90vh;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
 }

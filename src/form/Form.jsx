@@ -61,6 +61,7 @@ const Form = () => {
             onChange={(e) => handleBillChange(e)}
             value={bill}
             maxLength={10}
+            type='number'
           />
         </div>
         <div>
@@ -81,6 +82,7 @@ const Form = () => {
               onKeyDown={(e) => { e.key === 'Enter' && e.preventDefault(); }}
               value={customTipPercent}
               maxLength={2}
+              type='number'
             />
           </div>
         </div>
@@ -91,6 +93,7 @@ const Form = () => {
             id='people'
             onChange={(e) => handlePeopleChange(e)}
             value={people}
+            type='number'
           />
         </div>
       </form>

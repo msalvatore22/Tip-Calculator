@@ -15,7 +15,7 @@ const calculateTotalPerPerson = (bill, tipPerPerson, people) => {
 }
 
 const useStore = create((set) => ({
-  bill: 0,
+  bill: '',
   tipPercent: 0,
   customTipPercent: '',
   people: 1,
